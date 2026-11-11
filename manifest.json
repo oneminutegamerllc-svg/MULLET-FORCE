@@ -1,6 +1,6 @@
 {
   "name": "MULLET FORCE",
-  "version": 1,
+  "version": 3,
   "base": "https://cdn.jsdelivr.net/gh/oneminutegamerllc-svg/MULLET-FORCE@main/",
   "pixelArt": true,
   "sprites": {
@@ -40,12 +40,46 @@
             "death",
             "victory"
           ]
+        },
+        "death_seq": {
+          "frameWidth": 154,
+          "frameHeight": 256,
+          "frames": 6,
+          "fps": 10,
+          "loop": false,
+          "anchor": "bottom",
+          "names": [
+            "hit",
+            "launch",
+            "spin",
+            "hat_off",
+            "land",
+            "ghost"
+          ]
+        },
+        "spawn_seq": {
+          "frameWidth": 154,
+          "frameHeight": 256,
+          "frames": 6,
+          "fps": 8,
+          "loop": false,
+          "anchor": "bottom",
+          "names": [
+            "parachute",
+            "land",
+            "stand",
+            "knuckles",
+            "point",
+            "ready"
+          ]
         }
       },
       "files": {
         "run": "heroes/dusty/run.png",
         "poses": "heroes/dusty/poses.png",
-        "actions": "heroes/dusty/actions.png"
+        "actions": "heroes/dusty/actions.png",
+        "death_seq": "heroes/dusty/death_seq.png",
+        "spawn_seq": "heroes/dusty/spawn_seq.png"
       }
     },
     "grunt": {
@@ -164,6 +198,379 @@
       "files": {
         "all": "fx/pickups.png"
       }
+    },
+    "props": {
+      "sheets": {
+        "all": {
+          "frameWidth": 172,
+          "frameHeight": 192,
+          "frames": 8,
+          "fps": 0,
+          "loop": false,
+          "anchor": "center",
+          "names": [
+            "platform_hull",
+            "platform_ledge",
+            "platform_crates",
+            "platform_catwalk",
+            "drone",
+            "drum",
+            "pod",
+            "spore_plant"
+          ]
+        }
+      },
+      "files": {
+        "all": "props/props.png"
+      }
+    },
+    "brick": {
+      "sheets": {
+        "all": {
+          "frameWidth": 301,
+          "frameHeight": 256,
+          "frames": 5,
+          "fps": 12,
+          "loop": true,
+          "anchor": "bottom",
+          "names": [
+            "idle",
+            "run_a",
+            "run_b",
+            "fire",
+            "death"
+          ]
+        }
+      },
+      "files": {
+        "all": "heroes/brick/all.png"
+      },
+      "facing": "right",
+      "displayName": "Brick Kowalski"
+    },
+    "cordite": {
+      "sheets": {
+        "all": {
+          "frameWidth": 202,
+          "frameHeight": 256,
+          "frames": 6,
+          "fps": 12,
+          "loop": true,
+          "anchor": "bottom",
+          "names": [
+            "idle",
+            "run_a",
+            "run_b",
+            "fire",
+            "double_jump",
+            "death"
+          ]
+        }
+      },
+      "files": {
+        "all": "heroes/cordite/all.png"
+      },
+      "facing": "right",
+      "displayName": "Lady Cordite"
+    },
+    "rex": {
+      "sheets": {
+        "all": {
+          "frameWidth": 205,
+          "frameHeight": 256,
+          "frames": 6,
+          "fps": 12,
+          "loop": true,
+          "anchor": "bottom",
+          "names": [
+            "idle",
+            "run_a",
+            "run_b",
+            "fire",
+            "jump",
+            "death"
+          ]
+        }
+      },
+      "files": {
+        "all": "heroes/rex/all.png"
+      },
+      "facing": "right",
+      "displayName": "Rex Hammerfist"
+    },
+    "trooper": {
+      "sheets": {
+        "all": {
+          "frameWidth": 161,
+          "frameHeight": 192,
+          "frames": 6,
+          "fps": 10,
+          "loop": true,
+          "anchor": "bottom",
+          "names": [
+            "idle",
+            "run_a",
+            "run_b",
+            "shoot",
+            "hit",
+            "death"
+          ]
+        }
+      },
+      "files": {
+        "all": "enemies/trooper.png"
+      },
+      "facing": "left"
+    },
+    "heavy": {
+      "sheets": {
+        "all": {
+          "frameWidth": 241,
+          "frameHeight": 256,
+          "frames": 5,
+          "fps": 8,
+          "loop": true,
+          "anchor": "bottom",
+          "names": [
+            "idle",
+            "walk",
+            "flame",
+            "hit",
+            "death"
+          ]
+        }
+      },
+      "files": {
+        "all": "enemies/heavy.png"
+      },
+      "facing": "left"
+    },
+    "turrets": {
+      "sheets": {
+        "all": {
+          "frameWidth": 180,
+          "frameHeight": 160,
+          "frames": 4,
+          "fps": 0,
+          "loop": false,
+          "anchor": "bottom",
+          "names": [
+            "turret_idle",
+            "turret_fire",
+            "drone",
+            "sniper"
+          ]
+        }
+      },
+      "files": {
+        "all": "enemies/turrets.png"
+      },
+      "facing": "left"
+    },
+    "gunship": {
+      "sheets": {
+        "all": {
+          "frameWidth": 897,
+          "frameHeight": 320,
+          "frames": 4,
+          "fps": 6,
+          "loop": false,
+          "anchor": "center",
+          "names": [
+            "idle",
+            "fire",
+            "missiles",
+            "damaged"
+          ]
+        }
+      },
+      "files": {
+        "all": "enemies/gunship.png"
+      },
+      "facing": "left"
+    },
+    "worm": {
+      "sheets": {
+        "all": {
+          "frameWidth": 424,
+          "frameHeight": 480,
+          "frames": 5,
+          "fps": 6,
+          "loop": false,
+          "anchor": "bottom",
+          "names": [
+            "crack",
+            "rise1",
+            "rise2",
+            "rise3",
+            "full"
+          ]
+        }
+      },
+      "files": {
+        "all": "enemies/worm.png"
+      },
+      "facing": "left"
+    },
+    "mech": {
+      "sheets": {
+        "all": {
+          "frameWidth": 397,
+          "frameHeight": 400,
+          "frames": 5,
+          "fps": 6,
+          "loop": false,
+          "anchor": "bottom",
+          "names": [
+            "idle",
+            "step",
+            "fire",
+            "missile",
+            "explode"
+          ]
+        }
+      },
+      "files": {
+        "all": "enemies/mech.png"
+      },
+      "facing": "left"
+    },
+    "vehicles": {
+      "sheets": {
+        "all": {
+          "frameWidth": 296,
+          "frameHeight": 224,
+          "frames": 4,
+          "fps": 0,
+          "loop": false,
+          "anchor": "bottom",
+          "names": [
+            "jeep",
+            "truck",
+            "tank",
+            "truck_wreck"
+          ]
+        }
+      },
+      "files": {
+        "all": "props/vehicles.png"
+      }
+    },
+    "death_launch": {
+      "sheets": {
+        "all": {
+          "frameWidth": 116,
+          "frameHeight": 192,
+          "frames": 6,
+          "fps": 10,
+          "loop": false,
+          "anchor": "bottom"
+        }
+      },
+      "files": {
+        "all": "fx/death_launch.png"
+      }
+    },
+    "death_misc": {
+      "sheets": {
+        "all": {
+          "frameWidth": 96,
+          "frameHeight": 160,
+          "frames": 6,
+          "fps": 0,
+          "loop": false,
+          "anchor": "center",
+          "names": [
+            "skeleton",
+            "pancake",
+            "ash",
+            "balloon_pop",
+            "halo",
+            "tombstone"
+          ]
+        }
+      },
+      "files": {
+        "all": "fx/death_misc.png"
+      }
+    },
+    "nuke": {
+      "sheets": {
+        "all": {
+          "frameWidth": 286,
+          "frameHeight": 320,
+          "frames": 6,
+          "fps": 10,
+          "loop": false,
+          "anchor": "center"
+        }
+      },
+      "files": {
+        "all": "fx/nuke.png"
+      }
+    },
+    "flame": {
+      "sheets": {
+        "all": {
+          "frameWidth": 142,
+          "frameHeight": 160,
+          "frames": 6,
+          "fps": 14,
+          "loop": true,
+          "anchor": "center"
+        }
+      },
+      "files": {
+        "all": "fx/flame.png"
+      }
+    },
+    "projectiles": {
+      "sheets": {
+        "all": {
+          "frameWidth": 86,
+          "frameHeight": 96,
+          "frames": 6,
+          "fps": 0,
+          "loop": false,
+          "anchor": "center",
+          "names": [
+            "acid_glob",
+            "acid_splash",
+            "laser",
+            "rocket",
+            "grenade",
+            "casing"
+          ]
+        }
+      },
+      "files": {
+        "all": "fx/projectiles.png"
+      }
+    },
+    "hazards": {
+      "sheets": {
+        "all": {
+          "frameWidth": 144,
+          "frameHeight": 160,
+          "frames": 8,
+          "fps": 0,
+          "loop": false,
+          "anchor": "center",
+          "names": [
+            "acid_pool",
+            "spikes",
+            "electric_fence",
+            "mine",
+            "barrel_stack",
+            "sandbags",
+            "barrier",
+            "ammo_crate"
+          ]
+        }
+      },
+      "files": {
+        "all": "props/hazards.png"
+      }
     }
   },
   "backgrounds": {
@@ -192,6 +599,32 @@
         "alignBottom": true,
         "walkSurfaceFromTop": 0.18
       }
+    },
+    "base": {
+      "far": {
+        "file": "bg/base/far.jpg",
+        "w": 2048,
+        "h": 434,
+        "parallax": 0.1,
+        "tileX": true
+      },
+      "mid": {
+        "file": "bg/base/mid.png",
+        "w": 2048,
+        "h": 497,
+        "parallax": 0.4,
+        "tileX": true,
+        "alignBottom": true
+      },
+      "ground": {
+        "file": "bg/base/ground.png",
+        "w": 2048,
+        "h": 868,
+        "parallax": 1.0,
+        "tileX": true,
+        "alignBottom": true,
+        "walkSurfaceFromTop": 0.06
+      }
     }
   },
   "ui": {
@@ -200,5 +633,79 @@
       "w": 1200,
       "h": 570
     }
-  }
+  },
+  "music": {
+    "main_theme": {
+      "mp3": "music/main_theme.mp3",
+      "ogg": "music/main_theme.ogg",
+      "loop": true
+    }
+  },
+  "cutscenes": {
+    "intro": {
+      "file": "cutscenes/intro.jpg",
+      "w": 1600,
+      "h": 893
+    },
+    "worm": {
+      "file": "cutscenes/worm.jpg",
+      "w": 1600,
+      "h": 893
+    },
+    "lab": {
+      "file": "cutscenes/lab.jpg",
+      "w": 1600,
+      "h": 893
+    }
+  },
+  "levels": [
+    {
+      "id": 1,
+      "name": "Jungle Crash Site",
+      "bg": "jungle",
+      "enemies": [
+        "grunt",
+        "spitter"
+      ],
+      "setpiece": "worm",
+      "boss": "brood_mother",
+      "intro": "intro",
+      "outro": "worm"
+    },
+    {
+      "id": 2,
+      "name": "Blacksite Perimeter",
+      "bg": "base",
+      "enemies": [
+        "trooper",
+        "heavy",
+        "turrets",
+        "grunt"
+      ],
+      "vehicles": [
+        "truck",
+        "tank"
+      ],
+      "boss": "gunship",
+      "intro": "lab"
+    },
+    {
+      "id": 3,
+      "name": "The Lab",
+      "bg": "base",
+      "enemies": [
+        "trooper",
+        "heavy",
+        "grunt",
+        "spitter"
+      ],
+      "boss": "mech"
+    }
+  ],
+  "heroes": [
+    "dusty",
+    "brick",
+    "cordite",
+    "rex"
+  ]
 }
