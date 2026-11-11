@@ -1,0 +1,204 @@
+{
+  "name": "MULLET FORCE",
+  "version": 1,
+  "base": "https://cdn.jsdelivr.net/gh/oneminutegamerllc-svg/MULLET-FORCE@main/",
+  "pixelArt": true,
+  "sprites": {
+    "dusty": {
+      "displayName": "Dusty Steele",
+      "facing": "right",
+      "sheets": {
+        "run": {
+          "frameWidth": 209,
+          "frameHeight": 256,
+          "frames": 5,
+          "fps": 12,
+          "loop": true
+        },
+        "poses": {
+          "frameWidth": 344,
+          "frameHeight": 256,
+          "frames": 4,
+          "loop": false,
+          "names": [
+            "idle",
+            "jump",
+            "chainsaw",
+            "shoot"
+          ]
+        },
+        "actions": {
+          "frameWidth": 261,
+          "frameHeight": 256,
+          "frames": 6,
+          "loop": false,
+          "names": [
+            "crouch_shoot",
+            "aim_diag",
+            "aim_up",
+            "hit",
+            "death",
+            "victory"
+          ]
+        }
+      },
+      "files": {
+        "run": "heroes/dusty/run.png",
+        "poses": "heroes/dusty/poses.png",
+        "actions": "heroes/dusty/actions.png"
+      }
+    },
+    "grunt": {
+      "facing": "left",
+      "sheets": {
+        "all": {
+          "frameWidth": 162,
+          "frameHeight": 192,
+          "frames": 6,
+          "names": [
+            "idle",
+            "run_a",
+            "run_b",
+            "leap",
+            "hit",
+            "death"
+          ],
+          "fps": 10
+        }
+      },
+      "files": {
+        "all": "enemies/grunt.png"
+      }
+    },
+    "spitter": {
+      "facing": "left",
+      "sheets": {
+        "all": {
+          "frameWidth": 117,
+          "frameHeight": 224,
+          "frames": 5,
+          "names": [
+            "idle",
+            "windup",
+            "spit",
+            "hit",
+            "death"
+          ],
+          "fps": 8
+        }
+      },
+      "files": {
+        "all": "enemies/spitter.png"
+      }
+    },
+    "brood_mother": {
+      "facing": "left",
+      "sheets": {
+        "all": {
+          "frameWidth": 311,
+          "frameHeight": 560,
+          "frames": 5,
+          "names": [
+            "idle",
+            "birth",
+            "slam_windup",
+            "slam",
+            "spray"
+          ],
+          "fps": 6
+        }
+      },
+      "files": {
+        "all": "enemies/brood_mother.png"
+      }
+    },
+    "explosion": {
+      "sheets": {
+        "all": {
+          "frameWidth": 140,
+          "frameHeight": 160,
+          "frames": 6,
+          "fps": 14,
+          "loop": false,
+          "anchor": "center"
+        }
+      },
+      "files": {
+        "all": "fx/explosion.png"
+      }
+    },
+    "gib": {
+      "sheets": {
+        "all": {
+          "frameWidth": 144,
+          "frameHeight": 160,
+          "frames": 6,
+          "fps": 14,
+          "loop": false,
+          "anchor": "center"
+        }
+      },
+      "files": {
+        "all": "fx/gib.png"
+      }
+    },
+    "pickups": {
+      "sheets": {
+        "all": {
+          "frameWidth": 143,
+          "frameHeight": 160,
+          "frames": 6,
+          "fps": 0,
+          "loop": false,
+          "anchor": "center",
+          "names": [
+            "drum",
+            "cap_S",
+            "cap_L",
+            "cap_F",
+            "bullet",
+            "muzzle"
+          ]
+        }
+      },
+      "files": {
+        "all": "fx/pickups.png"
+      }
+    }
+  },
+  "backgrounds": {
+    "jungle": {
+      "far": {
+        "file": "bg/jungle/far.jpg",
+        "w": 2048,
+        "h": 868,
+        "parallax": 0.1,
+        "tileX": true
+      },
+      "mid": {
+        "file": "bg/jungle/mid.png",
+        "w": 2048,
+        "h": 601,
+        "parallax": 0.4,
+        "tileX": true,
+        "alignBottom": true
+      },
+      "ground": {
+        "file": "bg/jungle/ground.png",
+        "w": 2048,
+        "h": 512,
+        "parallax": 1.0,
+        "tileX": true,
+        "alignBottom": true,
+        "walkSurfaceFromTop": 0.18
+      }
+    }
+  },
+  "ui": {
+    "logo": {
+      "file": "ui/logo.png",
+      "w": 1200,
+      "h": 570
+    }
+  }
+}
